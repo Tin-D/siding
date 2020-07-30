@@ -1,0 +1,52 @@
+@import './var.scss';
+
+*{
+  list-style: none;
+  text-decoration: none;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+@each $colorKey, $color in $colors {
+  .bg-#{$colorKey}{
+    background: $color;
+  }
+};
+.w-100{
+  width: 300px;
+  height: 100px;
+}
+.d-flex{
+  display: flex;
+}
+@each $key, $value in $flex-direction{
+    .dir-#{$key}{
+        flex-direction: $value;
+    }
+}
+@each $key, $value in $flex-wrap{
+    .wrap-#{$key}{
+        flex-wrap: $value;
+    }
+}
+@each $key, $value in $flex-jc{
+    .jc-#{$key}{
+        justify-content: $value;
+    }
+}
+@each $key, $value in $flex-as{
+    .as-#{$key}{
+        align-self: $value;
+    }
+}
+@each $key, $value in $flex-ac{
+    .ac-#{$key}{
+        align-content: $value;
+    }
+}
+@each $key, $value in $flex-ai{
+    .ai-#{$key}{
+        align-items: $value;
+    }
+}

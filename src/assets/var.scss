@@ -1,0 +1,48 @@
+$colors:(
+        'white': #fff,
+        'pink': pink,
+        'green': green,
+        'red': red,
+        'yellow': yellow,
+        'skyblue': skyBlue,
+        'f1': #f1f1f1,
+);
+$flex-direction:(
+        row: row,
+        column: column,
+        rowReverse: row-reverse,
+        columnReverse: column-reverse,
+);
+$flex-wrap:(
+        nowrap: nowrap,
+        wrap: wrap,
+        wrapReverse: wrap-reverse,
+);
+$flex-jc:(
+        start: flex-start,
+        center: center,
+        end: flex-end,
+        between: space-between,
+        around: space-around,
+);
+$flex-as:(
+        start: flex-start,
+        center: center,
+        end: flex-end,
+        baseline: baseline,
+);
+$flex-ac:(
+        flex-start: flex-start,
+        flex-end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        stretch: stretch,
+);
+$flex-ai:(
+        start: flex-start,
+        center: center,
+        end: flex-end,
+        baseline: baseline,
+        stretch: stretch,
+);
