@@ -6,6 +6,7 @@ import 'lib-flexible';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/home.scss';
+import './assets/animation.css';
 import VeLine from 'v-charts/lib/bmap.common.js';
 import vueToTop from 'vue-totop'
 

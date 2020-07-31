@@ -1,5 +1,5 @@
 <template>
-    <div class="table d-flex" style="background: #F1F1F1; min-width: 820%;">
+    <div class="table d-flex m-0 p-0 ps-a c-black" style="background: #F1F1F1; min-width: 820%;">
 
         <div class="columns">
             <h3>Western blot</h3>
@@ -60,14 +60,9 @@
 
 <style lang="scss" scoped>
     .table{
-        margin: 0;
-        padding: 0;
-        position: absolute;
         bottom: -3rem;
         left: -3rem;
         z-index: 100000;
-        background: #f1f1f1;
-        color: #000;
         .columns{
             margin: .2rem;
             span{

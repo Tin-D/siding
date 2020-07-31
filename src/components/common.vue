@@ -2,39 +2,39 @@
     <div>
         <div class="nav d-flex jc-center">
             <router-link to="/" class="d-flex ai-center"><img src="http://www.simuwubio.com/upload/img/20190117203216.jpg" width="100px"></router-link>
-            <ul class="tab d-flex">
-                <li><router-link to="/">首页</router-link></li>
-                <li style="position: relative">
-                    <router-link to="/services">
+            <ul class="tab d-flex m-0">
+                <li class="p-22 d-block fs-12"><router-link to="/" class="c-77">首页</router-link></li>
+                <li class="p-22 d-block fs-12" style="position: relative">
+                    <router-link to="/services" class="c-77">
                         实验服务
                         <i class="el-icon-caret-bottom"></i>
-                        <i class="el-icon-caret-top"></i>
-                        <services-nav-list class="list"/>
+                        <i class="el-icon-caret-top d-none"></i>
+                        <services-nav-list class="list a-fadein d-none"/>
                     </router-link>
                 </li>
-                <li style="position: relative">
-                    <router-link to="/product_center">
+                <li class="p-22 d-block fs-12" style="position: relative">
+                    <router-link to="/product_center" class="c-77">
                         产品中心
                         <i class="el-icon-caret-bottom"></i>
-                        <i class="el-icon-caret-top"></i>
+                        <i class="el-icon-caret-top d-none"></i>
                     </router-link>
-                    <center-nav-list class="center"/>
+                    <center-nav-list class="center a-fadein d-none"/>
                 </li>
-                <li style="position: relative">
-                    <router-link to="/about">
+                <li class="p-22 d-block fs-12" style="position: relative">
+                    <router-link to="/about" class="c-77">
                         关于我们
-                        <i class="el-icon-caret-bottom"></i><i class="el-icon-caret-top"></i>
-                        <about-nav-list class="list"/>
+                        <i class="el-icon-caret-bottom"></i><i class="el-icon-caret-top d-none"></i>
+                        <about-nav-list class="list a-fadein d-none"/>
                     </router-link>
                 </li>
-                <li><router-link to="/news">新闻动态</router-link></li>
-                <li><router-link to="/promotion">促销活动</router-link></li>
-                <li><router-link to="/phone">联系我们</router-link></li>
+                <li class="p-22 d-block fs-12"><router-link to="/news" class="c-77">新闻动态</router-link></li>
+                <li class="p-22 d-block fs-12"><router-link to="/promotion" class="c-77">促销活动</router-link></li>
+                <li class="p-22 d-block fs-12"><router-link to="/phone" class="c-77">联系我们</router-link></li>
             </ul>
         </div>
-        <div class="search" :style="{backgroundImage:'url(' + pic + ')'}">
-            <div class="search1">
-                <div class="search2">
+        <div class="search d-flex dir-column ps-r" :style="{backgroundImage:'url(' + pic + ')'}">
+            <div class="search1 bg-57 d-flex jc-center">
+                <div class="search2 as-center">
                     <el-input placeholder="请输入关键词" v-model="input1" style="align-self: center;">
                         <template slot="prepend" style="background:#fff;"><i class="el-icon-search"></i></template>
                         <el-button slot="append" style="background:#00989e;color: #fff;font-weight: 600;width: 200px;">
@@ -43,7 +43,7 @@
                     </el-input>
                 </div>
             </div>
-            <div class="title">
+            <div class="title as-center fs-48 c-white ps-a">
                 <a>{{title}}</a>
             </div>
         </div>
@@ -51,11 +51,11 @@
         <footer class="footer bg-f1 d-flex ai-center dir-column">
             <el-divider></el-divider>
             <div class="top">
-                <ul class="d-flex jc-between">
-                    <li>
+                <ul class="d-flex jc-between m-0 p-0">
+                    <li class="fs-1">
                         <p>促销活动</p>
                     </li>
-                    <li class="d-flex dir-column jc-between">
+                    <li class="fs-1 d-flex dir-column jc-between">
                         <div>
                             <p>上海司鼎生物科技有限公司</p>
                             <p>上海徐汇区银都路398号1号楼401室</p>
@@ -75,7 +75,7 @@
             </div>
             <el-divider></el-divider>
             <div class="bottom d-flex jc-between">
-                <div class="left">
+                <div class="left c-77 fs-12">
                     <p>Copyright  ©  2019-2020   上海司鼎生物科技有限公司  All Rights Reserved.</p>
                 </div>
                 <ul class="right d-flex">
@@ -105,6 +105,7 @@
         data() {
             return {
                 input1: '',
+                show2: true,
             };
         },
         props: {
@@ -123,20 +124,7 @@
 <style lang="scss" scoped>
     .nav {
         .tab {
-            margin: 0;
-
-            li{
-                display: block;
-                font-size: .12rem;
-                padding: .22rem;
-                a{
-                    color: #777777;
-                }
-                .el-icon-caret-top, .list, .center {
-                    display: none;
-                }
-
-                &:hover {
+            li:hover {
                     background: #f1f1f1;
                     color: #000;
                     .list{
@@ -152,38 +140,26 @@
                         display: inline-block;
                     }
                 }
-            }
         }
     }
 
     .search {
         height: 2.4rem;
-        display: flex;
-        flex-direction: column;
-        position: relative;
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
         .search1 {
             height: .69rem;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            background: #57657e;
 
             .search2 {
                 margin: 0 auto;
                 width: 8rem;
-                align-self: center;
             }
         }
 
         .title {
-            align-self: center;
-            font-size: .48rem;
-            color: #fff;
             font-weight: 200;
-            position: absolute;
             bottom: .7rem;
         }
     }
@@ -193,14 +169,11 @@
         .top{
             margin: 20px 0 0 0;
             ul{
-                margin: 0;
-                padding: 0;
                 width: 8rem;
                 li{
                     height: 1.6rem;
                     width: 24%;
                     border-right: 1px solid #777777;
-                    font-size: .1rem;
                     font-weight: bold;
                 }
                 li:nth-last-child(1){
@@ -211,10 +184,6 @@
         .bottom{
             padding: .2rem 0;
             width: 8rem;
-            .left{
-                color: #777777;
-                font-size: .12rem;
-            }
             .right{
                 li{
                     margin: 0 .05rem;

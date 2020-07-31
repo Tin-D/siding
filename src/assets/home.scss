@@ -13,12 +13,23 @@ html, body{
     background: $color;
   }
 };
+@each $colorKey, $color in $colors {
+  .c-#{$colorKey}{
+    color: $color;
+  }
+};
 .w-100{
   width: 300px;
   height: 100px;
 }
 .d-flex{
   display: flex;
+}
+.d-block{
+  display: block;
+}
+.d-none{
+  display: none;
 }
 @each $key, $value in $flex-direction{
     .dir-#{$key}{
@@ -49,4 +60,23 @@ html, body{
     .ai-#{$key}{
         align-items: $value;
     }
+}
+
+@each $key, $value in $spacing-types{
+  @each $key1, $value1 in $spacing-sizes{
+    .#{$key}-#{$key1} {
+      #{$value}: $value1 * $spacing-base-size
+    }
+  }
+}
+
+@each $key, $value in $font-size{
+  .fs-#{$key}{
+    font-size: $value * $spacing-base-size;
+  }
+}
+@each $key, $value in $position{
+  .ps-#{$key}{
+    position: $value;
+  }
 }
